@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マルチメディアコンテンツ配信システム - サンプル画面</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="demo-container">
+        <nav class="demo-nav">
+            <div class="nav-brand">
+                <i class="fas fa-shield-alt"></i>
+                セキュアコンテンツ配信システム
+            </div>
+            <ul class="nav-links">
+                <li><a href="#dashboard" class="nav-link active" onclick="showScreen('dashboard')">コンテンツ一覧</a></li>
+                <li><a href="#viewer" class="nav-link" onclick="showScreen('viewer')">ビューアー</a></li>
+                <li><a href="#admin" class="nav-link" onclick="showScreen('admin')">管理画面</a></li>
+            </ul>
+            <div class="user-info">
+                <span class="donation-level">寄付レベル: プレミアム (Lv.3)</span>
+                <span class="user-name">田中 太郎</span>
+            </div>
+        </nav>
+
+        <!-- コンテンツ一覧画面 -->
+        <div id="dashboard" class="screen active">
+            <div class="screen-header">
+                <h1>コンテンツ一覧</h1>
+                <div class="header-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="コンテンツを検索...">
+                    </div>
+                    <div class="filter-dropdown">
+                        <select>
+                            <option>すべてのタイプ</option>
+                            <option>PDF</option>
+                            <option>EPUB</option>
+                            <option>動画</option>
+                            <option>画像</option>
+                            <option>テキスト</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card accessible">
+                    <div class="content-thumbnail">
+                        <i class="fas fa-file-pdf"></i>
+                        <div class="content-type-badge">PDF</div>
+                        <div class="donation-badge level-1">Lv.1</div>
+                    </div>
+                    <div class="content-info">
+                        <h3>JavaScriptプログラミング入門</h3>
+                        <p class="content-author">山田 花子</p>
+                        <p class="content-description">初心者向けのJavaScript学習書。基礎から応用まで丁寧に解説...</p>
+                        <div class="content-meta">
+                            <span><i class="fas fa-file"></i> 120ページ</span>
+                            <span><i class="fas fa-download"></i> 2.5MB</span>
+                            <span><i class="fas fa-eye"></i> 324回閲覧</span>
+                        </div>
+                        <button class="btn-primary" onclick="showScreen('viewer')">
+                            <i class="fas fa-eye"></i> 閲覧する
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-card accessible">
+                    <div class="content-thumbnail video-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                        <div class="content-type-badge video">動画</div>
+                        <div class="donation-badge level-2">Lv.2</div>
+                        <div class="video-duration">45:32</div>
+                    </div>
+                    <div class="content-info">
+                        <h3>React.js実践講座 - コンポーネント設計</h3>
+                        <p class="content-author">佐藤 太郎</p>
+                        <p class="content-description">実践的なReactアプリケーション開発の解説動画。プロジェクトベースで学習...</p>
+                        <div class="content-meta">
+                            <span><i class="fas fa-clock"></i> 45分32秒</span>
+                            <span><i class="fas fa-video"></i> 1080p</span>
+                            <span><i class="fas fa-eye"></i> 156回再生</span>
+                        </div>
+                        <button class="btn-primary">
+                            <i class="fas fa-play"></i> 再生する
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-card locked">
+                    <div class="content-thumbnail">
+                        <i class="fas fa-book"></i>
+                        <div class="content-type-badge">EPUB</div>
+                        <div class="donation-badge level-3">Lv.3</div>
+                        <div class="lock-overlay">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="content-info">
+                        <h3>上級者向けシステム設計パターン</h3>
+                        <p class="content-author">鈴木 一郎</p>
+                        <p class="content-description">大規模システムの設計パターンとベストプラクティス...</p>
+                        <div class="content-meta">
+                            <span><i class="fas fa-book"></i> 15章</span>
+                            <span><i class="fas fa-download"></i> 8.2MB</span>
+                            <span class="locked-text">寄付レベル3が必要</span>
+                        </div>
+                        <button class="btn-locked" disabled>
+                            <i class="fas fa-lock"></i> 寄付レベル不足
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-card accessible">
+                    <div class="content-thumbnail">
+                        <i class="fas fa-image"></i>
+                        <div class="content-type-badge image">画像</div>
+                        <div class="donation-badge level-1">Lv.1</div>
+                    </div>
+                    <div class="content-info">
+                        <h3>UIデザインギャラリー 2024</h3>
+                        <p class="content-author">デザインチーム</p>
+                        <p class="content-description">最新のUIデザイントレンドを集めた画像集...</p>
+                        <div class="content-meta">
+                            <span><i class="fas fa-images"></i> 50枚</span>
+                            <span><i class="fas fa-expand"></i> 4K解像度</span>
+                            <span><i class="fas fa-eye"></i> 89回閲覧</span>
+                        </div>
+                        <button class="btn-primary">
+                            <i class="fas fa-image"></i> ギャラリー
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-card accessible">
+                    <div class="content-thumbnail">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="content-type-badge markdown">MD</div>
+                        <div class="donation-badge level-1">Lv.1</div>
+                    </div>
+                    <div class="content-info">
+                        <h3>APIドキュメンテーションガイド</h3>
+                        <p class="content-author">開発チーム</p>
+                        <p class="content-description">効果的なAPI仕様書の書き方とベストプラクティス...</p>
+                        <div class="content-meta">
+                            <span><i class="fas fa-file-alt"></i> Markdown</span>
+                            <span><i class="fas fa-download"></i> 150KB</span>
+                            <span><i class="fas fa-eye"></i> 203回閲覧</span>
+                        </div>
+                        <button class="btn-primary">
+                            <i class="fas fa-file-alt"></i> 読む
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-card locked">
+                    <div class="content-thumbnail video-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                        <div class="content-type-badge video">動画</div>
+                        <div class="donation-badge level-4">Lv.4</div>
+                        <div class="video-duration">2:15:42</div>
+                        <div class="lock-overlay">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="content-info">
+                        <h3>マスタークラス: フルスタック開発</h3>
+                        <p class="content-author">エキスパート講師陣</p>
+                        <p class="content-description">プロフェッショナル向けの包括的な開発講座...</p>
+                        <div class="content-meta">
+                            <span><i class="fas fa-clock"></i> 2時間15分</span>
+                            <span><i class="fas fa-video"></i> 4K</span>
+                            <span class="locked-text">寄付レベル4が必要</span>
+                        </div>
+                        <button class="btn-locked" disabled>
+                            <i class="fas fa-lock"></i> 寄付レベル不足
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- コンテンツビューアー画面 -->
+        <div id="viewer" class="screen">
+            <div class="viewer-header">
+                <button class="btn-back" onclick="showScreen('dashboard')">
+                    <i class="fas fa-arrow-left"></i> 戻る
+                </button>
+                <h2>JavaScriptプログラミング入門</h2>
+                <div class="viewer-controls">
+                    <button class="btn-icon" title="全画面"><i class="fas fa-expand"></i></button>
+                    <button class="btn-icon" title="設定"><i class="fas fa-cog"></i></button>
+                </div>
+            </div>
+
+            <div class="viewer-container">
+                <div class="pdf-viewer">
+                    <div class="pdf-toolbar">
+                        <div class="toolbar-left">
+                            <button class="btn-icon" title="前のページ"><i class="fas fa-chevron-left"></i></button>
+                            <span class="page-info">ページ 1 / 120</span>
+                            <button class="btn-icon" title="次のページ"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="toolbar-center">
+                            <button class="btn-icon" title="縮小"><i class="fas fa-minus"></i></button>
+                            <span class="zoom-info">100%</span>
+                            <button class="btn-icon" title="拡大"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="toolbar-right">
+                            <button class="btn-icon" title="検索"><i class="fas fa-search"></i></button>
+                            <button class="btn-icon" title="目次"><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="pdf-content">
+                        <div class="pdf-page">
+                            <div class="watermark">田中太郎 - 2024/01/15 14:30</div>
+                            <div class="pdf-page-content">
+                                <h1 style="text-align: center; margin-top: 80px;">JavaScriptプログラミング入門</h1>
+                                <p style="text-align: center; margin-top: 40px; font-size: 18px;">～基礎から実践まで～</p>
+                                <div style="text-align: center; margin-top: 60px;">
+                                    <p>著者: 山田 花子</p>
+                                    <p>出版日: 2024年1月</p>
+                                </div>
+                                <div style="margin-top: 100px; padding: 20px; background: #f5f5f5; border-left: 4px solid #007bff;">
+                                    <h3>はじめに</h3>
+                                    <p>このテキストは、プログラミング初心者がJavaScriptを効率的に学習できるように構成されています。基礎文法から始まり、DOM操作、非同期処理、モダンなフレームワークの基本概念まで幅広くカバーしています。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="security-notice">
+                    <i class="fas fa-shield-alt"></i>
+                    このコンテンツは著作権保護されています。不正な複製・配布は禁止されています。
+                </div>
+            </div>
+        </div>
+
+        <!-- 管理画面 -->
+        <div id="admin" class="screen">
+            <div class="admin-header">
+                <h1>管理画面</h1>
+                <button class="btn-primary">
+                    <i class="fas fa-plus"></i> 新規コンテンツ追加
+                </button>
+            </div>
+
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-file"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>127</h3>
+                        <p>総コンテンツ数</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>1,845</h3>
+                        <p>アクティブユーザー</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>23,567</h3>
+                        <p>今月のアクセス数</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>99.9%</h3>
+                        <p>セキュリティスコア</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-content">
+                <div class="admin-section">
+                    <h2>コンテンツ管理</h2>
+                    <div class="table-container">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>タイトル</th>
+                                    <th>タイプ</th>
+                                    <th>作成者</th>
+                                    <th>寄付レベル</th>
+                                    <th>アクセス数</th>
+                                    <th>状態</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>JavaScriptプログラミング入門</td>
+                                    <td><span class="type-badge pdf">PDF</span></td>
+                                    <td>山田 花子</td>
+                                    <td><span class="level-badge level-1">レベル 1</span></td>
+                                    <td>324</td>
+                                    <td><span class="status-active">公開中</span></td>
+                                    <td>
+                                        <button class="btn-icon-small" title="編集"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon-small" title="ログ"><i class="fas fa-chart-line"></i></button>
+                                        <button class="btn-icon-small" title="削除"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>React.js実践講座</td>
+                                    <td><span class="type-badge video">動画</span></td>
+                                    <td>佐藤 太郎</td>
+                                    <td><span class="level-badge level-2">レベル 2</span></td>
+                                    <td>156</td>
+                                    <td><span class="status-active">公開中</span></td>
+                                    <td>
+                                        <button class="btn-icon-small" title="編集"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon-small" title="ログ"><i class="fas fa-chart-line"></i></button>
+                                        <button class="btn-icon-small" title="削除"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>上級者向けシステム設計</td>
+                                    <td><span class="type-badge epub">EPUB</span></td>
+                                    <td>鈴木 一郎</td>
+                                    <td><span class="level-badge level-3">レベル 3</span></td>
+                                    <td>89</td>
+                                    <td><span class="status-draft">下書き</span></td>
+                                    <td>
+                                        <button class="btn-icon-small" title="編集"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon-small" title="公開"><i class="fas fa-upload"></i></button>
+                                        <button class="btn-icon-small" title="削除"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="admin-section">
+                    <h2>セキュリティ監視</h2>
+                    <div class="security-panel">
+                        <div class="security-item">
+                            <div class="security-status safe">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="security-info">
+                                <h4>暗号化ストレージ</h4>
+                                <p>すべてのファイルが正常に暗号化されています</p>
+                            </div>
+                        </div>
+                        <div class="security-item">
+                            <div class="security-status safe">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="security-info">
+                                <h4>アクセス制御</h4>
+                                <p>不正なアクセス試行: 過去24時間で0件</p>
+                            </div>
+                        </div>
+                        <div class="security-item">
+                            <div class="security-status warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="security-info">
+                                <h4>ストリームトークン</h4>
+                                <p>期限切れトークン: 15個 (清理処理待ち)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showScreen(screenId) {
+            // すべての画面を非表示
+            document.querySelectorAll('.screen').forEach(screen => {
+                screen.classList.remove('active');
+            });
+            
+            // すべてのナビリンクの active クラスを削除
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // 指定された画面を表示
+            document.getElementById(screenId).classList.add('active');
+            
+            // 対応するナビリンクをアクティブに
+            document.querySelector(`a[href="#${screenId}"]`).classList.add('active');
+        }
+
+        // セキュリティ保護のデモ（実際の機能ではなく見た目のみ）
+        document.addEventListener('contextmenu', function(e) {
+            if (document.querySelector('#viewer.active')) {
+                e.preventDefault();
+                showSecurityAlert();
+            }
+        });
+
+        function showSecurityAlert() {
+            const alert = document.createElement('div');
+            alert.className = 'security-alert';
+            alert.innerHTML = '<i class="fas fa-shield-alt"></i> この操作は保護されています';
+            document.body.appendChild(alert);
+            
+            setTimeout(() => {
+                document.body.removeChild(alert);
+            }, 2000);
+        }
+
+        // 動的統計の更新（デモ用）
+        setInterval(() => {
+            const accessCount = document.querySelector('.stat-card:nth-child(3) h3');
+            if (accessCount) {
+                const current = parseInt(accessCount.textContent.replace(',', ''));
+                accessCount.textContent = (current + Math.floor(Math.random() * 10)).toLocaleString();
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
