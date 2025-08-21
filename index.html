@@ -50,43 +50,105 @@
             <div class="content-grid">
                 <div class="content-card accessible">
                     <div class="content-thumbnail">
-                        <i class="fas fa-file-pdf"></i>
-                        <div class="content-type-badge">PDF</div>
+                        <i class="fas fa-book"></i>
+                        <div class="content-type-badge">テキスト</div>
                         <div class="donation-badge level-1">Lv.1</div>
                     </div>
                     <div class="content-info">
-                        <h3>JavaScriptプログラミング入門</h3>
-                        <p class="content-author">山田 花子</p>
-                        <p class="content-description">初心者向けのJavaScript学習書。基礎から応用まで丁寧に解説...</p>
+                        <h3>注文の多い料理店</h3>
+                        <p class="content-author">宮沢 賢治</p>
+                        <p class="content-description">二人の若い紳士が山奥で迷い込んだ不思議な料理店での出来事を描いた代表的な童話作品。1924年初版発行。</p>
                         <div class="content-meta">
-                            <span><i class="fas fa-file"></i> 120ページ</span>
-                            <span><i class="fas fa-download"></i> 2.5MB</span>
-                            <span><i class="fas fa-eye"></i> 324回閲覧</span>
+                            <span><i class="fas fa-file-alt"></i> 青空文庫</span>
+                            <span><i class="fas fa-calendar"></i> 1924年</span>
+                            <span><i class="fas fa-eye"></i> 1,245回閲覧</span>
                         </div>
-                        <button class="btn-primary" onclick="showScreen('viewer')">
-                            <i class="fas fa-eye"></i> 閲覧する
+                        <button class="btn-primary" onclick="showContent('chumon')">
+                            <i class="fas fa-book-open"></i> 読む
                         </button>
                     </div>
                 </div>
 
                 <div class="content-card accessible">
-                    <div class="content-thumbnail video-thumbnail">
-                        <i class="fas fa-play-circle"></i>
-                        <div class="content-type-badge video">動画</div>
-                        <div class="donation-badge level-2">Lv.2</div>
-                        <div class="video-duration">45:32</div>
+                    <div class="content-thumbnail">
+                        <i class="fas fa-book"></i>
+                        <div class="content-type-badge">テキスト</div>
+                        <div class="donation-badge level-1">Lv.1</div>
                     </div>
                     <div class="content-info">
-                        <h3>React.js実践講座 - コンポーネント設計</h3>
-                        <p class="content-author">佐藤 太郎</p>
-                        <p class="content-description">実践的なReactアプリケーション開発の解説動画。プロジェクトベースで学習...</p>
+                        <h3>銀河鉄道の夜</h3>
+                        <p class="content-author">宮沢 賢治</p>
+                        <p class="content-description">ジョバンニとカムパネルラが銀河鉄道に乗って幻想的な宇宙を旅する未完の名作童話。1927年頃の作品。</p>
                         <div class="content-meta">
-                            <span><i class="fas fa-clock"></i> 45分32秒</span>
-                            <span><i class="fas fa-video"></i> 1080p</span>
-                            <span><i class="fas fa-eye"></i> 156回再生</span>
+                            <span><i class="fas fa-file-alt"></i> 青空文庫</span>
+                            <span><i class="fas fa-calendar"></i> 1927年</span>
+                            <span><i class="fas fa-eye"></i> 2,156回閲覧</span>
                         </div>
-                        <button class="btn-primary">
-                            <i class="fas fa-play"></i> 再生する
+                        <button class="btn-primary" onclick="showContent('ginga')">
+                            <i class="fas fa-book-open"></i> 読む
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-card accessible">
+                    <div class="content-thumbnail">
+                        <i class="fas fa-book"></i>
+                        <div class="content-type-badge">テキスト</div>
+                        <div class="donation-badge level-2">Lv.2</div>
+                    </div>
+                    <div class="content-info">
+                        <h3>こころ</h3>
+                        <p class="content-author">夏目 漱石</p>
+                        <p class="content-description">「先生」と呼ばれる男性の心の奥底に秘められた過去の秘密を描いた近代文学の傑作。人間の心の複雑さを深く掘り下げた名作。</p>
+                        <div class="content-meta">
+                            <span><i class="fas fa-file-alt"></i> 青空文庫</span>
+                            <span><i class="fas fa-calendar"></i> 1914年</span>
+                            <span><i class="fas fa-eye"></i> 3,891回閲覧</span>
+                        </div>
+                        <button class="btn-primary" onclick="showContent('kokoro')">
+                            <i class="fas fa-book-open"></i> 読む
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-card accessible">
+                    <div class="content-thumbnail">
+                        <i class="fas fa-book"></i>
+                        <div class="content-type-badge">テキスト</div>
+                        <div class="donation-badge level-1">Lv.1</div>
+                    </div>
+                    <div class="content-info">
+                        <h3>走れメロス</h3>
+                        <p class="content-author">太宰 治</p>
+                        <p class="content-description">友情と信義を描いた太宰治の代表的短編小説。メロスが親友のために命をかけて走り抜く物語。</p>
+                        <div class="content-meta">
+                            <span><i class="fas fa-file-alt"></i> 青空文庫</span>
+                            <span><i class="fas fa-calendar"></i> 1940年</span>
+                            <span><i class="fas fa-eye"></i> 1,789回閲覧</span>
+                        </div>
+                        <button class="btn-primary" onclick="showContent('melos')">
+                            <i class="fas fa-book-open"></i> 読む
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-card accessible">
+                    <div class="content-thumbnail">
+                        <i class="fas fa-book"></i>
+                        <div class="content-type-badge">テキスト</div>
+                        <div class="donation-badge level-1">Lv.1</div>
+                    </div>
+                    <div class="content-info">
+                        <h3>蜘蛛の糸</h3>
+                        <p class="content-author">芥川 龍之介</p>
+                        <p class="content-description">極楽から地獄を見下ろすお釈迦様が、一筋の蜘蛛の糸を垂らして罪人を救おうとする仏教的な寓話。</p>
+                        <div class="content-meta">
+                            <span><i class="fas fa-file-alt"></i> 青空文庫</span>
+                            <span><i class="fas fa-calendar"></i> 1918年</span>
+                            <span><i class="fas fa-eye"></i> 1,567回閲覧</span>
+                        </div>
+                        <button class="btn-primary" onclick="showContent('kumo')">
+                            <i class="fas fa-book-open"></i> 読む
                         </button>
                     </div>
                 </div>
@@ -94,86 +156,19 @@
                 <div class="content-card locked">
                     <div class="content-thumbnail">
                         <i class="fas fa-book"></i>
-                        <div class="content-type-badge">EPUB</div>
-                        <div class="donation-badge level-3">Lv.3</div>
-                        <div class="lock-overlay">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                    </div>
-                    <div class="content-info">
-                        <h3>上級者向けシステム設計パターン</h3>
-                        <p class="content-author">鈴木 一郎</p>
-                        <p class="content-description">大規模システムの設計パターンとベストプラクティス...</p>
-                        <div class="content-meta">
-                            <span><i class="fas fa-book"></i> 15章</span>
-                            <span><i class="fas fa-download"></i> 8.2MB</span>
-                            <span class="locked-text">寄付レベル3が必要</span>
-                        </div>
-                        <button class="btn-locked" disabled>
-                            <i class="fas fa-lock"></i> 寄付レベル不足
-                        </button>
-                    </div>
-                </div>
-
-                <div class="content-card accessible">
-                    <div class="content-thumbnail">
-                        <i class="fas fa-image"></i>
-                        <div class="content-type-badge image">画像</div>
-                        <div class="donation-badge level-1">Lv.1</div>
-                    </div>
-                    <div class="content-info">
-                        <h3>UIデザインギャラリー 2024</h3>
-                        <p class="content-author">デザインチーム</p>
-                        <p class="content-description">最新のUIデザイントレンドを集めた画像集...</p>
-                        <div class="content-meta">
-                            <span><i class="fas fa-images"></i> 50枚</span>
-                            <span><i class="fas fa-expand"></i> 4K解像度</span>
-                            <span><i class="fas fa-eye"></i> 89回閲覧</span>
-                        </div>
-                        <button class="btn-primary">
-                            <i class="fas fa-image"></i> ギャラリー
-                        </button>
-                    </div>
-                </div>
-
-                <div class="content-card accessible">
-                    <div class="content-thumbnail">
-                        <i class="fas fa-file-alt"></i>
-                        <div class="content-type-badge markdown">MD</div>
-                        <div class="donation-badge level-1">Lv.1</div>
-                    </div>
-                    <div class="content-info">
-                        <h3>APIドキュメンテーションガイド</h3>
-                        <p class="content-author">開発チーム</p>
-                        <p class="content-description">効果的なAPI仕様書の書き方とベストプラクティス...</p>
-                        <div class="content-meta">
-                            <span><i class="fas fa-file-alt"></i> Markdown</span>
-                            <span><i class="fas fa-download"></i> 150KB</span>
-                            <span><i class="fas fa-eye"></i> 203回閲覧</span>
-                        </div>
-                        <button class="btn-primary">
-                            <i class="fas fa-file-alt"></i> 読む
-                        </button>
-                    </div>
-                </div>
-
-                <div class="content-card locked">
-                    <div class="content-thumbnail video-thumbnail">
-                        <i class="fas fa-play-circle"></i>
-                        <div class="content-type-badge video">動画</div>
+                        <div class="content-type-badge">テキスト</div>
                         <div class="donation-badge level-4">Lv.4</div>
-                        <div class="video-duration">2:15:42</div>
                         <div class="lock-overlay">
                             <i class="fas fa-lock"></i>
                         </div>
                     </div>
                     <div class="content-info">
-                        <h3>マスタークラス: フルスタック開発</h3>
-                        <p class="content-author">エキスパート講師陣</p>
-                        <p class="content-description">プロフェッショナル向けの包括的な開発講座...</p>
+                        <h3>人間失格</h3>
+                        <p class="content-author">太宰 治</p>
+                        <p class="content-description">「恥の多い生涯を送って来ました」の書き出しで始まる太宰治の代表作。人間存在の根源的な苦悩を描いた私小説的長編。</p>
                         <div class="content-meta">
-                            <span><i class="fas fa-clock"></i> 2時間15分</span>
-                            <span><i class="fas fa-video"></i> 4K</span>
+                            <span><i class="fas fa-file-alt"></i> 青空文庫</span>
+                            <span><i class="fas fa-calendar"></i> 1948年</span>
                             <span class="locked-text">寄付レベル4が必要</span>
                         </div>
                         <button class="btn-locked" disabled>
@@ -190,7 +185,7 @@
                 <button class="btn-back" onclick="showScreen('dashboard')">
                     <i class="fas fa-arrow-left"></i> 戻る
                 </button>
-                <h2>JavaScriptプログラミング入門</h2>
+                <h2>注文の多い料理店</h2>
                 <div class="viewer-controls">
                     <button class="btn-icon" title="全画面"><i class="fas fa-expand"></i></button>
                     <button class="btn-icon" title="設定"><i class="fas fa-cog"></i></button>
@@ -198,37 +193,56 @@
             </div>
 
             <div class="viewer-container">
-                <div class="pdf-viewer">
-                    <div class="pdf-toolbar">
+                <div class="text-viewer">
+                    <div class="text-toolbar">
                         <div class="toolbar-left">
-                            <button class="btn-icon" title="前のページ"><i class="fas fa-chevron-left"></i></button>
-                            <span class="page-info">ページ 1 / 120</span>
-                            <button class="btn-icon" title="次のページ"><i class="fas fa-chevron-right"></i></button>
+                            <div class="work-info">
+                                <span class="work-title">注文の多い料理店</span>
+                                <span class="work-author">宮沢賢治</span>
+                            </div>
                         </div>
                         <div class="toolbar-center">
-                            <button class="btn-icon" title="縮小"><i class="fas fa-minus"></i></button>
-                            <span class="zoom-info">100%</span>
-                            <button class="btn-icon" title="拡大"><i class="fas fa-plus"></i></button>
+                            <button class="btn-icon" title="文字サイズ小"><i class="fas fa-minus"></i></button>
+                            <span class="font-info">標準</span>
+                            <button class="btn-icon" title="文字サイズ大"><i class="fas fa-plus"></i></button>
                         </div>
                         <div class="toolbar-right">
                             <button class="btn-icon" title="検索"><i class="fas fa-search"></i></button>
-                            <button class="btn-icon" title="目次"><i class="fas fa-list"></i></button>
+                            <button class="btn-icon" title="しおり"><i class="fas fa-bookmark"></i></button>
                         </div>
                     </div>
 
-                    <div class="pdf-content">
-                        <div class="pdf-page">
+                    <div class="text-content">
+                        <div class="text-page">
                             <div class="watermark">田中太郎 - 2024/01/15 14:30</div>
-                            <div class="pdf-page-content">
-                                <h1 style="text-align: center; margin-top: 80px;">JavaScriptプログラミング入門</h1>
-                                <p style="text-align: center; margin-top: 40px; font-size: 18px;">～基礎から実践まで～</p>
-                                <div style="text-align: center; margin-top: 60px;">
-                                    <p>著者: 山田 花子</p>
-                                    <p>出版日: 2024年1月</p>
+                            <div class="text-page-content">
+                                <h1 class="work-title-main">注文の多い料理店</h1>
+                                <p class="work-author-main">宮沢賢治</p>
+                                
+                                <div class="story-content">
+                                    <p>　二人の若い紳士が、すっかり英国の兵隊のかたちをして、ぴかぴかする鉄砲をかついで、白熊のような犬を二疋つれて、だいぶ山奥の、木の葉のかさかさしたところを、こんなことを言いながら、あるいておりました。</p>
+                                    
+                                    <p>「ぜんたい、ここらの山は怪しからんね。鳥も獣も一疋も居やしない。なんでも構わないから、早くタンタアーンと、やって見たいもんだなあ。」</p>
+                                    
+                                    <p>「鹿の黄いろのや、鳥の青いのや、いろいろ居ると聞いたのに、これはどうしたことだろう。」</p>
+                                    
+                                    <p>それもそのはず、昨日、おととい、このごろ、この山では鉄砲をばんばん撃つ人があって、鳥も獣もみんなびっくりして逃げてしまい、中にはひどく腹を立てて、わざと鉄砲に向って突進し、あべこべに鉄砲を持った人を、どこまでも追い回したものもありました。</p>
+                                    
+                                    <p>それはともかく、二人はもうへとへとに疲れてしまって、それに、はじめ、あんまりぴかぴか光る鉄砲やら、何やらを持っていたものですから、けものや鳥はなおさら近寄らなかったのです。</p>
+                                    
+                                    <p>「もうこれでほんとうに鳥もいないし、けものもいないから、さあ帰ろうや。」</p>
+                                    
+                                    <p>「そうしよう。もうなんにも居ないようだね。元来、こんな山に来たのがまちがいだったかもしれない。」</p>
+                                    
+                                    <p>ところが、なんと、よしんばもう帰ろうといっても、どの道を通ってきたか、わからなくなってしまったのです。</p>
+                                    
+                                    <p class="continued">（続く...）</p>
                                 </div>
-                                <div style="margin-top: 100px; padding: 20px; background: #f5f5f5; border-left: 4px solid #007bff;">
-                                    <h3>はじめに</h3>
-                                    <p>このテキストは、プログラミング初心者がJavaScriptを効率的に学習できるように構成されています。基礎文法から始まり、DOM操作、非同期処理、モダンなフレームワークの基本概念まで幅広くカバーしています。</p>
+                                
+                                <div class="aozora-note">
+                                    <p><strong>青空文庫より</strong></p>
+                                    <p>この作品は著作権が切れており、青空文庫で自由に読むことができます。</p>
+                                    <p>初出：「注文の多い料理店」イーハトーブ童話社、1924年12月1日</p>
                                 </div>
                             </div>
                         </div>
@@ -404,6 +418,26 @@
             
             // 対応するナビリンクをアクティブに
             document.querySelector(`a[href="#${screenId}"]`).classList.add('active');
+        }
+
+        function showContent(contentId) {
+            // ビューアー画面に切り替え
+            showScreen('viewer');
+            
+            // コンテンツに応じてタイトルと内容を変更（デモ用）
+            const titles = {
+                'chumon': '注文の多い料理店',
+                'ginga': '銀河鉄道の夜',
+                'kokoro': 'こころ',
+                'melos': '走れメロス',
+                'kumo': '蜘蛛の糸'
+            };
+            
+            if (titles[contentId]) {
+                document.querySelector('#viewer h2').textContent = titles[contentId];
+                document.querySelector('.work-title').textContent = titles[contentId];
+                document.querySelector('.work-title-main').textContent = titles[contentId];
+            }
         }
 
         // セキュリティ保護のデモ（実際の機能ではなく見た目のみ）
